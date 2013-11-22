@@ -1,0 +1,36 @@
+doctype 5
+html(lang="es")
+	head
+		title = "Chat Node JS"
+		meta(charset='utf-8')
+		link(href='/styles/stylePrincipal.css',rel='stylesheet')
+		script window.onload = "iniciar();"
+		
+	body 
+		header
+			h1 Chat
+			h2#usuario No estas logueado !!
+		section.sala
+			form#formChat
+				input(type='text', name='mens', id='mens', required, placeholder='Participa en el chat' disabled)
+				input( type='button', value='Enviar', class='btnLogIn', id="sendM")
+				button#btnClosSes Cerrar Sesion
+		div#ingresaNombre
+				div#setNombre.pantalla
+					form#formNombre.form
+						label(for='name') Nombre:
+						input(type='text', name='name',id='name',placeholder='Ingrese su nombre' required)
+						input(type='button', value='Listo!', class='btnLogIn', id='setNick')			
+		div#chat
+			div#hChat Chatea - javascript
+			div#chatInsite
+		div#cont		
+			h2 Usuarios Conectados
+			div#usuarios
+	footer 
+		p Bienvenidos al Taller de Node.Js
+			
+	script(src='/socket.io/socket.io.js')
+	script(src='scripts/scriptPrincipal.js')
+
+			
